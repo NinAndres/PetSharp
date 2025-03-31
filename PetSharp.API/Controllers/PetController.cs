@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PetSharp.Application.UserCases.Pet.GetAll;
 using PetSharp.Application.UserCases.Pet.Register;
 using PetSharp.Application.UserCases.Pet.Update;
 using PetSharp.Communication.Requests;
@@ -28,6 +29,21 @@ namespace PetSharp.API.Controllers
 
             return NoContent();
 
+        }
+
+        [HttpGet]
+        [ProducesResponseType(typeof(ResponseAllPetJson), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        public IActionResult GetAllShort()
+        {
+            var response = new GetAllPetsUseCase().Execute();
+
+            if (response.Pets.Any())
+            {
+                return Ok(response);
+            }
+
+            return NoContent();
         }
     }
 }
