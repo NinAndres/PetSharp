@@ -1,0 +1,6 @@
+@PetSharp.API_HostAddress = http://localhost:5160
+
+GET {{PetSharp.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
