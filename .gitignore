@@ -400,4 +400,4 @@ FodyWeavers.xsd
 *.sln.iml
 
 #
-.\PetSharp.API\appsettings.Development.json
+PetSharp.API/appsettings.Development.json
