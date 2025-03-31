@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PetSharp.Application.UserCases.Pet.Delete;
 using PetSharp.Application.UserCases.Pet.GetAll;
 using PetSharp.Application.UserCases.Pet.GetById;
 using PetSharp.Application.UserCases.Pet.Register;
@@ -57,5 +58,17 @@ namespace PetSharp.API.Controllers
 
             return Ok(response);
         }
+
+        [HttpDelete]
+        [Route("{id}")]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ResponseErrorsJson), StatusCodes.Status404NotFound)]
+        public IActionResult Delete(int id)
+        {
+            new DeletePetById().Execute(id);
+
+            return NoContent();
+        }
+
     }
 }
