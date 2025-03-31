@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PetSharp.Application.UserCases.Pet.GetAll;
+using PetSharp.Application.UserCases.Pet.GetById;
 using PetSharp.Application.UserCases.Pet.Register;
 using PetSharp.Application.UserCases.Pet.Update;
 using PetSharp.Communication.Requests;
@@ -44,6 +45,17 @@ namespace PetSharp.API.Controllers
             }
 
             return NoContent();
+        }
+
+        [HttpGet]
+        [Route("{id}")]
+        [ProducesResponseType(typeof(ResponsePetJson), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ResponseErrorsJson), StatusCodes.Status404NotFound)]
+        public IActionResult Get(int id)
+        {
+            var response = new GetPetByIdUseCase().Execute(id);
+
+            return Ok(response);
         }
     }
 }
