@@ -1,11 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetSharp.API", "PetSharp.API\PetSharp.API.csproj", "{63C8F9E9-B0D2-4B59-A02B-48FF7BFFDA64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetSharp.communication", "PetSharp.communication\PetSharp.communication.csproj", "{09A648D3-8CDF-4618-8304-EDCDD1E15204}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetSharp.Communication", "PetSharp.communication\PetSharp.Communication.csproj", "{09A648D3-8CDF-4618-8304-EDCDD1E15204}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetSharp.Application", "PetSharp.Application\PetSharp.Application.csproj", "{B4748ACE-8036-45B0-B07B-58D5B6989CC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +28,10 @@ Global
 		{09A648D3-8CDF-4618-8304-EDCDD1E15204}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09A648D3-8CDF-4618-8304-EDCDD1E15204}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09A648D3-8CDF-4618-8304-EDCDD1E15204}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4748ACE-8036-45B0-B07B-58D5B6989CC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4748ACE-8036-45B0-B07B-58D5B6989CC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4748ACE-8036-45B0-B07B-58D5B6989CC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4748ACE-8036-45B0-B07B-58D5B6989CC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

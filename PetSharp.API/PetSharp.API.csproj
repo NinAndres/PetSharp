@@ -11,7 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\PetSharp.Application\PetSharp.Application.csproj" />
+    <ProjectReference Include="..\PetSharp.communication\PetSharp.Communication.csproj" />
   </ItemGroup>
 
 </Project>
