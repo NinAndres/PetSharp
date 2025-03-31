@@ -2,7 +2,7 @@
 
 namespace PetSharp.Communication.Requests
 {
-    public class RequestRegisterPetJson
+    public class RequestPetJson
     {
         public string Name { get; set; } = string.Empty;
 
