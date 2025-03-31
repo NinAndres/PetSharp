@@ -10,6 +10,7 @@ namespace PetSharp.API.Controllers
     {
         [HttpPost]
         [ProducesResponseType(typeof(ResponseRegisteredPetJson), StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(ResponseErrorsJson), StatusCodes.Status400BadRequest)]
         public IActionResult Register([FromBody] RequestPetJson request)
         {
             var response = new RegisterPetUseCase().Execute(request);
@@ -20,6 +21,7 @@ namespace PetSharp.API.Controllers
         [HttpPut]
         [Route("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(typeof(ResponseErrorsJson), StatusCodes.Status400BadRequest)]
         public IActionResult Update([FromRoute] int id, [FromBody] RequestPetJson request)
         {
             new UpdatePetUseCase().Execute(id, request);
